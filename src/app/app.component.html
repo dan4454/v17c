@@ -1,4 +1,4 @@
-<div ngbDropdown class="d-inline-block">
+<!-- <div ngbDropdown class="d-inline-block">
   <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
     Toggle dropdown
   </button>
@@ -7,7 +7,7 @@
     <button ngbDropdownItem>Another Action</button>
     <button ngbDropdownItem>Something else is here</button>
   </div>
-</div>
+</div> -->
 
 <nav class="navbar navbar-expand-md navbar-light bg-body-tertiary">
   <div class="container-fluid">
@@ -28,8 +28,9 @@
 				<li class="nav-item" ngbDropdown>
 					<a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown1" role="button"> Static </a>
 					<div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu">
-						<a ngbDropdownItem href="#" (click)="$event.preventDefault()">Action</a>
-						<a ngbDropdownItem href="#" (click)="$event.preventDefault()">Another action</a>
+						<a ngbDropdownItem routerLink = '' (click)="$event.preventDefault()">Home</a>
+						<a ngbDropdownItem routerLink = 'parent1' (click)="$event.preventDefault()">Parent 1</a>
+						<a ngbDropdownItem routerLink = 'deferandif' (click)="$event.preventDefault()">Defer and if experimenting</a>
 						<a ngbDropdownItem href="#" (click)="$event.preventDefault()">Something else here</a>
 					</div>
 				</li>

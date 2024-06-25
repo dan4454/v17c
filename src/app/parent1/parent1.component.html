@@ -1,0 +1,21 @@
+<h2>Establish a signal in parent component</h2>
+
+parent value : {{isAdminChange}}
+<br>
+name: {{name}}
+<br>
+person: {{person | json}}
+
+<br><br>
+
+name from service: {{mainService.name}}
+
+<br><br>
+
+<button class = 'btn btn-primary' (click) = 'changeValue()'>click to change from parent</button>
+
+<hr>
+ 
+@defer(){
+<app-child1 [(checked)] = "isAdminChange" [(name)] = 'name' [(person)] = 'person'/>
+}

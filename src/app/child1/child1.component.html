@@ -1,0 +1,18 @@
+<!-- <p>child1 works!</p> -->
+
+<button class='btn btn-primary' (click)="resetValues()"> click to change values </button>
+
+<br><br>
+
+status: {{checked()}}
+<br>
+name: {{name()}}
+<br>
+person: {{person() | json}}
+<br>
+person2: {{person().name}}
+<br>
+Name from service: {{mainService.name}}
+<br><br>
+
+Service stuff: {{mainService | json}}

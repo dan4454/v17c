@@ -2,3 +2,7 @@
 
 /* Importing Bootstrap SCSS file. */
 @use 'bootstrap/scss/bootstrap';
+
+html {
+    margin:3px;
+}
