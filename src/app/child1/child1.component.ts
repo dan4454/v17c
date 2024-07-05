@@ -1,22 +1,13 @@
 import { JsonPipe } from '@angular/common';
 import {
-  Component,
-  ModelSignal,
-  SimpleChange,
-  SimpleChanges,
-  computed,
-  effect,
-  inject,
-  input,
-  model,
-  signal,
-} from '@angular/core';
+  Component,  EventEmitter,  ModelSignal,  Output,  SimpleChange,  SimpleChanges,  computed,  effect,  inject,  input,  model,  signal,} from '@angular/core';
 import { MainService } from '../main.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-child1',
   standalone: true,
-  imports: [JsonPipe],
+  imports: [JsonPipe, FormsModule],
   templateUrl: './child1.component.html',
   styleUrl: './child1.component.scss',
 })
@@ -26,6 +17,12 @@ export class Child1Component {
   name = model<any>('sally');
   person: any = model({});
   personName = this.person().name;
+
+  @Output ('parentFunction') parentFunction: EventEmitter<any> = new EventEmitter();
+
+  
+
+  lastName = '';
 
   mainService = inject(MainService);
 
@@ -44,6 +41,10 @@ export class Child1Component {
     this.mainService.makeRandomName();
   }
 
+  cp(s: any) {
+    this.parentFunction.emit(s);
+  }
+
   // ngOnChanges(changes: SimpleChange) {
   //   console.log(changes)
   // }
@@ -56,4 +57,6 @@ export class Child1Component {
   //   }
   // }
 
+
+  
 }

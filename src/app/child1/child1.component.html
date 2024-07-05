@@ -16,3 +16,9 @@ Name from service: {{mainService.name}}
 <br><br>
 
 Service stuff: {{mainService | json}}
+<br><br>
+Lastname:<br>
+<input type = 'text' [(ngModel)] = 'person().lastName'>
+
+<br><br>
+<button (click) = 'cp("what!!!!")' class = 'btn btn-primary'>Call parent alert function</button>
