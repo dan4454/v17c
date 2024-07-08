@@ -5,7 +5,9 @@ import { Injectable } from '@angular/core';
 })
 export class MainService {
 
-  name = 'Hal';
+  name = 'Albert Smart';
+  isAdmin = false;
+
 
   constructor() { }
 

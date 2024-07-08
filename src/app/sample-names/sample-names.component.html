@@ -1,0 +1,40 @@
+<h2 class="text-center">Users</h2>
+
+<br>
+
+<!-- @for (record of data; track record) {
+    <div>{{record.name}} -- {{record.email}}</div>
+} -->
+
+<div class = 'container-fluid text-break'>
+    @for(rec of data; track rec){
+
+        <!-- <hr> -->
+        <div style = 'border-top: 1px solid black' class = 'row row-cols-2 row-cols-sm-3 
+                row-cols-md-3 row-cols-lg-6 row-cols-xl-6'>
+            <div class = 'col'>
+                <div class = 'b'>Name</div>
+                <div style = 'color:blue; font-weight: bold;'>{{rec.name}}</div>
+            </div>
+            <div class = 'col'>
+                <div class = 'b'>email</div>
+                {{rec.email}}
+            </div>
+            <div class = 'col'>
+                <div class = 'b'>City</div>
+                {{rec.address.city}}
+            </div>
+            <div class = 'col'>
+                <div class = 'b'>Zip</div>
+                {{rec.address.zipcode}}
+            </div>
+            <div class = 'col'>
+                <div class = 'b'>Phone</div>
+                {{rec.phone}}
+            </div>
+            <div class = 'col margin:auto'>
+                <button (click) = "showRecord(rec)" class = 'btn btn-primary btn-sm' style = 'margin: 5px'>Edit </button>
+            </div>
+        </div>
+    }
+</div>
