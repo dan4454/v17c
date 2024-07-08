@@ -21,17 +21,17 @@
 		>
     <span class="navbar-toggler-icon"></span>
   </button>
-  <span class="navbar-brand">Dropdowns in navbar</span>
+  <span style = 'font-weight: bolder;' class ="navbar-brand btn"  routerLink = "" >Dropdowns in navbar</span>
   
 		<div class="navbar-collapse" [class.collapse]="collapsed" id="navbarContent">
-			<ul class="navbar-nav ms-auto">
+			<ul class="navbar-nav me-auto">
 				<li class="nav-item" ngbDropdown>
 					<a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown1" role="button"> Static </a>
 					<div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu">
 						<a ngbDropdownItem routerLink = '' (click)="$event.preventDefault()">Home</a>
 						<a ngbDropdownItem routerLink = 'parent1' (click)="$event.preventDefault()">Parent 1</a>
 						<a ngbDropdownItem routerLink = 'deferandif' (click)="$event.preventDefault()">Defer and if experimenting</a>
-						<a ngbDropdownItem href="#" (click)="$event.preventDefault()">Something else here</a>
+						<a ngbDropdownItem routerLink='samplenames' (click)="$event.preventDefault()">Sample Names</a>
 					</div>
 				</li>
 
@@ -56,4 +56,5 @@
 		</div>
 	</div>
 </nav>
+<hr>
 <router-outlet />

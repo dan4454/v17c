@@ -10,4 +10,5 @@ import { DeferAndIfChildComponent } from '../defer-and-if-child/defer-and-if-chi
 })
 export class DeferAndIfComponent {
   showChild = false;
+
 }
