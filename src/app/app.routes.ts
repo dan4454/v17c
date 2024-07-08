@@ -24,5 +24,7 @@ export const routes: Route[] = [
       import('./parent-new-input/parent-new-input.component').then(
         m => m.ParentNewInputComponent
       ),
-  },
+    },
+    {path: 'persons', loadComponent: () => import('./persons/persons.component').then(m => m.PersonsComponent)},
+
 ];
