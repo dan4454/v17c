@@ -1,4 +1,14 @@
 <h2 class="text-center">Users</h2>
+<div class='container text-center'>
+
+    <a href='javascript:' (click)='showInfo = !showInfo'>Info</a>
+</div>
+
+@if (showInfo) {
+<div class='infoBox'>
+    Click on a name to see more. There will be more info here later.
+</div>
+}
 
 <br>
 
@@ -6,35 +16,63 @@
     <div>{{record.name}} -- {{record.email}}</div>
 } -->
 
-<div class = 'container-fluid text-break'>
+<div class='container-fluid text-break' style='border-bottom: 1px solid black'>
     @for(rec of data; track rec){
 
-        <!-- <hr> -->
-        <div style = 'border-top: 1px solid black' class = 'row row-cols-2 row-cols-sm-3 
+    <div style='border-top: 1px solid black' class='row row-cols-2 row-cols-sm-3 
                 row-cols-md-3 row-cols-lg-6 row-cols-xl-6'>
-            <div class = 'col'>
-                <div class = 'b'>Name</div>
-                <div style = 'color:blue; font-weight: bold;'>{{rec.name}}</div>
-            </div>
-            <div class = 'col'>
-                <div class = 'b'>email</div>
-                {{rec.email}}
-            </div>
-            <div class = 'col'>
-                <div class = 'b'>City</div>
-                {{rec.address.city}}
-            </div>
-            <div class = 'col'>
-                <div class = 'b'>Zip</div>
-                {{rec.address.zipcode}}
-            </div>
-            <div class = 'col'>
-                <div class = 'b'>Phone</div>
-                {{rec.phone}}
-            </div>
-            <div class = 'col margin:auto'>
-                <button (click) = "showRecord(rec)" class = 'btn btn-primary btn-sm' style = 'margin: 5px'>Edit </button>
+
+        <div class='col' style='cursor:pointer' (click)=showRecord(rec)>
+            <div class='b'>Name</div>
+            <div style='color:blue; font-weight: bold;'>
+                {{rec.name}} ({{rec.id}})
             </div>
         </div>
+
+
+        <div class='col'>
+            <div class='b'>email</div>
+            {{rec.email}}
+        </div>
+
+        <div class='col'>
+            <div class='b'>City</div>
+            {{rec.address.city}}
+        </div>
+
+        <div class='col'>
+            <div class='b'>Zip</div>
+            {{rec.address.zipcode}}
+        </div>
+
+        <div class='col'>
+            <div class='b'>Phone</div>
+            {{rec.phone}}
+        </div>
+
+
+        @if(showIdNumber == rec.id) {
+            <div class = 'w-100' style = 'color: green;font-weight:bold' >Here is where more stuff goes. Like maybe a 
+                menu of actions you can take, or more information for you to see.
+
+                <br>
+                <button class = 'btn btn-primary btn-sm'>View/Edit</button>
+                <button class = 'btn btn-primary btn-sm'>Email</button>
+                <button class = 'btn btn-primary btn-sm'>Payroll history</button>
+                <button class = 'btn btn-primary btn-sm'>Hours</button>
+                <button class = 'btn btn-primary btn-sm'>PTO history</button>
+                <button class = 'btn btn-primary btn-sm'>Jobs</button>
+                <button class = 'btn btn-primary btn-sm'>Deductions/Garnishments</button>
+            </div>
+                
+        }
+        
+
+
+    </div>
     }
 </div>
+
+<br>
+<br>
+<br>

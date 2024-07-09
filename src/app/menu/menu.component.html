@@ -1,12 +1,10 @@
-
-
 <nav class="navbar navbar-expand-md navbar-light bg-body-tertiary">
 	<div class="container-fluid">
 		<button class="navbar-toggler" type="button" aria-controls="navbarContent" [attr.aria-expanded]="!collapsed"
 			aria-label="Toggle navigation" (click)="collapsed = !collapsed">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-		<span class="navbar-brand" routerLink = '' style = "cursor:pointer">Dropdowns in navbar</span>
+		<span class="navbar-brand" routerLink='' style="cursor:pointer">Dropdowns in navbar</span>
 
 		<div class="navbar-collapse" [class.collapse]="collapsed" id="navbarContent">
 
@@ -24,7 +22,7 @@
 							"input()"</a>
 						<a ngbDropdownItem routerLink='deferandif' (click)="$event.preventDefault()">Defer and if
 							experimenting</a>
-						<a ngbDropdownItem routerLink = 'persons' (click)="$event.preventDefault()">Persons</a>
+						<a ngbDropdownItem routerLink='samplenames' (click)="$event.preventDefault()">Sample Names</a>
 						<a ngbDropdownItem href="#" (click)="$event.preventDefault()">Something else here</a>
 					</div>
 				</li>
