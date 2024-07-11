@@ -10,10 +10,10 @@ import { ChildNewInputComponent } from '../child-new-input/child-new-input.compo
 })
 export class ParentNewInputComponent {
 
-  firstParent: any = 'bob';
+  parentName: any = 'bob';
 
   changeName() {
-    this.firstParent = Math.random();
+    this.parentName = Math.random();
   }
 
 

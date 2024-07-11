@@ -9,12 +9,12 @@ import { Component, input, output } from '@angular/core';
 })
 export class ChildNewInputComponent {
 
-  
-  firstChild : any = input();
-  firstChildChange = output<any>()
+
+  parentNameInChild: any = input();
+  parentNameInChildChange = output<any>();
 
   changeName() {
-    this.firstChildChange.emit(Math.random() )
+    this.parentNameInChildChange.emit(Math.random())
   }
 
 }
