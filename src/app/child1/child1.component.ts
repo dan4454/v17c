@@ -42,7 +42,7 @@ export class Child1Component {
   }
 
   cp(s: any) {
-    this.parentFunction.emit(s);
+    // this.parentFunction.emit(s);
   }
 
   // ngOnChanges(changes: SimpleChange) {
