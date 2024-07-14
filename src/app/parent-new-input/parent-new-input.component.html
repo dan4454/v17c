@@ -1,0 +1,16 @@
+<p>parent-new-input works!</p>
+
+This will be based on the instructions in this site:
+<a href="https://www.angulararchitects.io/blog/component-communication-with-signals-inputs-two-way-bindings-and-content-view-queries/"
+    target=new>
+    https://www.angulararchitects.io/blog/component-communication-with-signals-inputs-two-way-bindings-and-content-view-queries/</a>
+
+<br><br>
+firstParent: {{parentName}}
+<button (click)="changeName()" class='btn btn-primary'>Change name</button>
+
+<hr>
+
+@defer(){
+<app-child-new-input [(parentNameInChild)]='parentName'></app-child-new-input>
+}

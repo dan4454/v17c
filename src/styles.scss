@@ -2,3 +2,20 @@
 
 /* Importing Bootstrap SCSS file. */
 @use 'bootstrap/scss/bootstrap';
+
+html {
+    margin:3px;
+}
+
+button {
+    margin:1px
+}
+
+.infoBox {
+    background: yellow;
+    margin: auto;
+    max-width: 600px;
+    padding: 10px;
+    border: 1px black solid;
+
+}

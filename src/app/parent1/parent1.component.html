@@ -1,0 +1,26 @@
+<h2>Establish a signal in parent component</h2>
+
+parent value : {{isAdminChange}}
+<br>
+name: {{name}}
+<br>
+person: {{person | json}}
+
+<br><br>
+
+name from service: {{mainService.name}}
+
+<br><br>
+Function value received: {{functionValue}}
+
+<br><br>
+
+<button class = 'btn btn-primary' (click) = 'changeValue()'>click to change from parent</button>
+<br><br>
+Lastname:<br>
+<input type = 'text' [(ngModel)] = 'person  .lastName'>
+<hr>
+ 
+@defer(){
+    <app-child1 [(checked)] = "isAdminChange" [(name)] = 'name' [(person)] = 'person' (parentFunction) = 'showParentAlert("kdkdkdkdk")'/>
+}

@@ -1,0 +1,13 @@
+<p>defer-and-if works!</p>
+
+<hr>
+
+<button class = 'btn btn-primary' (click)='showChild = !showChild'>Show child</button>
+
+
+@if (showChild){
+    @defer() {
+      <hr>
+      <app-defer-and-if-child></app-defer-and-if-child>
+    }
+}
