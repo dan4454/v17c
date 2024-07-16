@@ -19,8 +19,14 @@ Function value received: {{functionValue}}
 <br><br>
 Lastname:<br>
 <input type = 'text' [(ngModel)] = 'person  .lastName'>
+<br>
+value: {{value1()}}
 <hr>
  
 @defer(){
-    <app-child1 [(checked)] = "isAdminChange" [(name)] = 'name' [(person)] = 'person' (parentFunction) = 'showParentAlert("kdkdkdkdk")'/>
+    <app-child1 [(value1)] = 'value1' 
+    [(checked)] = "isAdminChange" 
+    [(name)] = 'name' 
+    [(person)] = 'person'
+    (parentFunction) = 'showParentAlert("kdkdkdkdk")'/>
 }

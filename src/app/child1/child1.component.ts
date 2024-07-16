@@ -18,6 +18,8 @@ export class Child1Component {
   person: any = model({});
   personName = this.person().name;
 
+  value1 = model(0);
+
   @Output ('parentFunction') parentFunction: EventEmitter<any> = new EventEmitter();
 
   
@@ -31,6 +33,10 @@ export class Child1Component {
       const aa = this.person();
       console.log('person changed in effect');
     });
+  }
+
+  updateValue1() {
+    this.value1.update(v => v + 1);
   }
 
   resetValues() {

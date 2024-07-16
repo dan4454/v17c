@@ -3,7 +3,6 @@ import { Child1Component } from '../child1/child1.component';
 import { JsonPipe } from '@angular/common';
 import { MainService } from '../main.service';
 import { FormsModule } from '@angular/forms';
-import { Output } from '@angular/core';
 
 @Component({
   selector: 'app-parent1',
@@ -13,6 +12,11 @@ import { Output } from '@angular/core';
   styleUrl: './parent1.component.scss',
 })
 export class Parent1Component {
+
+  // value1 = 10;
+  value1 = model(10, {alias:'value1'}); // use the alias for binding to the child component
+
+
   mainService = inject(MainService);
 
   protected isAdminChange = false;
@@ -32,6 +36,7 @@ export class Parent1Component {
     this.name = 'sally';
     console.log('clicked parent change');
     this.person.name = 'zlzlzlzlz';
+    this.value1.update(a=> a + 1);
   }
 
   showParentAlert(s: any) {
