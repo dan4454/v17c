@@ -11,7 +11,8 @@ import axios from 'axios';
 export class SampleNamesComponent implements OnInit {
 
   data: any = [];
-by: any;
+  showInfo = false;
+  showIdNumber = 0;
 
   async getData() {
     var result = await axios.get('https://jsonplaceholder.typicode.com/users')
@@ -26,7 +27,11 @@ by: any;
   }
 
   showRecord(rec: any){
-    alert(rec.name)
+    if (this.showIdNumber == rec.id) {
+      this.showIdNumber = 0;
+      return;
+    }
+    this.showIdNumber = rec.id
   }
   
 

@@ -1,0 +1,18 @@
+<h2 class = 'text-center'>Click button with code</h2>
+
+<button id = 'myButton' class = 'btn btn-primary' (click) = 'open(content)'>Open dialog</button>
+
+
+
+<ng-template #content let-modal>
+	<div class="modal-header">
+		<h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+	</div>
+	<div class="modal-body">
+        Here is the body of my new modal/dialog box. That didn't take too long, did it?
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-outline-secondary" (click)="modal.close('Save click')">Save</button>
+	</div>
+</ng-template>

@@ -18,6 +18,8 @@ export class Child1Component {
   person: any = model({});
   personName = this.person().name;
 
+  value1 = model(0);
+
   @Output ('parentFunction') parentFunction: EventEmitter<any> = new EventEmitter();
 
   
@@ -33,6 +35,10 @@ export class Child1Component {
     });
   }
 
+  updateValue1() {
+    this.value1.update(v => v + 1);
+  }
+
   resetValues() {
     // While standard inputs are read-only, you can write directly to model inputs.
     this.checked.set(!this.checked());
@@ -42,7 +48,7 @@ export class Child1Component {
   }
 
   cp(s: any) {
-    this.parentFunction.emit(s);
+    // this.parentFunction.emit(s);
   }
 
   // ngOnChanges(changes: SimpleChange) {
