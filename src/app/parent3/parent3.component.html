@@ -1,0 +1,52 @@
+
+<div class = 'container-fluid'>
+<div class = 'row'>
+    <div class = 'col-12 col-sm-6'>
+        parent 3
+        <hr>
+        {{name}}
+        <br>
+        new name: <input [(ngModel)] = 'name'>
+    </div>
+    
+    <div class = 'col-6'>
+        <app-child3 [(parentName)] = "name"></app-child3>
+    </div>
+
+</div>
+</div>
+
+<div class = 'row row-cols-2 row-cols-sm-3 row-cols-md-5'>
+    
+    <div>div1</div>
+    <div>div2</div>
+    <div>div2</div>
+    <div>div2</div>
+    <div>div2</div>
+</div>
+
+<br><br>
+    <div style = 'display:flex; flex-wrap:wrap'>
+
+        <span style = 'padding:5px; width: 155px'>span1</span>
+        <span style = 'padding:5px; width: 155px'>span2</span>
+        <span style = 'padding:5px; width: calc(155px * 20)'>span2 what happens when there is a lot of text</span>
+        <span style = 'padding:5px; width: 155px'>span2</span>
+        <span style = 'padding:5px; width: 155px'>span2</span>
+        
+        <span style = 'padding:5px; width: 155px'>span2</span>
+        <span style = 'padding:5px; width: 155px'>span2</span>
+        <span style = 'padding:5px; width: 155px'>span2</span>
+        <span style = 'padding:5px; width: 155px'>span2</span>
+        <span style = 'padding:5px; width: 155px'>span2</span>
+        <span style = 'padding:5px; width: 155px'>span2</span>
+        <span style = 'padding:5px; width: 155px'>span2</span>
+        <span style = 'padding:5px; width: 155px'>span2</span>
+        <span style = 'padding:5px; width: 155px'>span2</span>
+        <span style = 'padding:5px; width: 155px'>span2</span>
+        <span style = 'padding:5px; width: 155px'>span2</span>
+        <span style = 'padding:5px; width: 155px'>span2</span>
+        <span style = 'padding:5px; width: 155px'>span2</span>
+        <span style = 'padding:5px; width: 155px'>span2</span>
+        <span style = 'padding:5px; width: 155px'>span2</span>
+    </div>

@@ -6,5 +6,6 @@ export const routes: Routes = [
     { path: 'samplenames', loadComponent: () => import('./sample-names/sample-names.component').then(m => m.SampleNamesComponent) },
     { path: 'clickbuttonwithcode', loadComponent: () => import('./click-button-with-code/click-button-with-code.component').then(m => m.ClickButtonWithCodeComponent) },
     { path: 'parentnewinput', loadComponent: () => import('./parent-new-input/parent-new-input.component').then(m => m.ParentNewInputComponent) },
+    { path: 'parent3', loadComponent: () => import('./parent3/parent3.component').then(m => m.Parent3Component) },
 
 ];

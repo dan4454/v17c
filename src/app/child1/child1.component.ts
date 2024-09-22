@@ -1,6 +1,7 @@
 import { JsonPipe } from '@angular/common';
 import {
-  Component,  EventEmitter,  ModelSignal,  Output,  SimpleChange,  SimpleChanges,  computed,  effect,  inject,  input,  model,  signal,} from '@angular/core';
+  Component, EventEmitter, ModelSignal, Output, SimpleChange, SimpleChanges, computed, effect, inject, input, model, signal,
+} from '@angular/core';
 import { MainService } from '../main.service';
 import { FormsModule } from '@angular/forms';
 
@@ -14,15 +15,15 @@ import { FormsModule } from '@angular/forms';
 export class Child1Component {
   checked = model(false);
   disabled = input(false);
-  name = model<any>('sally');
+  name = model('');
   person: any = model({});
   personName = this.person().name;
 
   value1 = model(0);
 
-  @Output ('parentFunction') parentFunction: EventEmitter<any> = new EventEmitter();
+  @Output('parentFunction') parentFunction: EventEmitter<any> = new EventEmitter();
 
-  
+
 
   lastName = '';
 
@@ -42,7 +43,7 @@ export class Child1Component {
   resetValues() {
     // While standard inputs are read-only, you can write directly to model inputs.
     this.checked.set(!this.checked());
-    this.name.set(Math.random());
+    this.name.set(Math.random() + "");
     this.person().name = 'abc';  // you can use objects, too
     this.mainService.makeRandomName();
   }
@@ -64,5 +65,5 @@ export class Child1Component {
   // }
 
 
-  
+
 }
