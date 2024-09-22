@@ -6,7 +6,7 @@ import { MenuComponent } from './menu/menu.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,RouterModule, NgbDropdownModule, MenuComponent],
+  imports: [RouterOutlet, RouterModule, NgbDropdownModule, MenuComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -17,5 +17,7 @@ export class AppComponent {
 
 // how about some comments here?
 // second comment
+// third
+
 
 
