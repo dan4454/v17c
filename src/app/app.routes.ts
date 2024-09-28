@@ -7,5 +7,6 @@ export const routes: Routes = [
     { path: 'clickbuttonwithcode', loadComponent: () => import('./click-button-with-code/click-button-with-code.component').then(m => m.ClickButtonWithCodeComponent) },
     { path: 'parentnewinput', loadComponent: () => import('./parent-new-input/parent-new-input.component').then(m => m.ParentNewInputComponent) },
     { path: 'parent3', loadComponent: () => import('./parent3/parent3.component').then(m => m.Parent3Component) },
+    { path: 'sendImage', loadComponent: () => import('./send-image/send-image.component').then(m => m.SendImageComponent) },
 
 ];
